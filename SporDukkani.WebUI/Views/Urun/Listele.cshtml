@@ -1,8 +1,16 @@
-﻿@model SporDukkani.Veriler.Varliklar.Urun
+﻿@using SporDukkani.Veriler.Varliklar
+@model IEnumerable<Urun>
 
 @{
-    ViewBag.Title = "Listele";
+    ViewBag.Title = "Ürün Listele";
 }
 
-<h2>Listele</h2>
+@foreach(var urn in Model)
+{
+    <div>
+        <h3>@urn.Isim</h3>
+        @urn.Aciklama
+        <h4>@urn.Fiyat.ToString("c")</h4>
+    </div>
 
+}
