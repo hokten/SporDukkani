@@ -6,6 +6,7 @@ using System;
 using System.Web;
 using SporDukkani.WebUI;
 
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
 
@@ -37,7 +38,9 @@ namespace SporDukkani.WebUI
         }
         private static void RegisterServices(IKernel kernel)
         {
-            //kernel.Bind<IRepo>().ToMethod(ctx => new Repo("Ninject Rocks!"));
+            System.Web.Mvc.DependencyResolver.SetResolver(
+                new SporDukkani.WebUI.Altyapi.NinjectDependencyResolver(kernel));
+
         }
     }
 }
