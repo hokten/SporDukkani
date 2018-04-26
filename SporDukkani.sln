@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SporDukkani.Veriler", "Spor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SporDukkani.Testler", "SporDukkani.Testler\SporDukkani.Testler.csproj", "{B0528B8E-268A-41F3-9548-E13E4B666154}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SporDukkani.WebUI", "SporDukkani.WebUI\SporDukkani.WebUI.csproj", "{CA19C676-CDD4-4B06-8EF7-686C7C913FA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B0528B8E-268A-41F3-9548-E13E4B666154}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0528B8E-268A-41F3-9548-E13E4B666154}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0528B8E-268A-41F3-9548-E13E4B666154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA19C676-CDD4-4B06-8EF7-686C7C913FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA19C676-CDD4-4B06-8EF7-686C7C913FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA19C676-CDD4-4B06-8EF7-686C7C913FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA19C676-CDD4-4B06-8EF7-686C7C913FA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
