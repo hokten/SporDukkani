@@ -39,6 +39,7 @@
       <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -122,6 +123,16 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SporDukkani.Veriler\SporDukkani.Veriler.csproj">
+      <Project>{b09ccf7a-5d6a-4506-a4be-e2b25e9f94d5}</Project>
+      <Name>SporDukkani.Veriler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SporDukkani.WebUI\SporDukkani.WebUI.csproj">
+      <Project>{ca19c676-cdd4-4b06-8ef7-686c7c913fa8}</Project>
+      <Name>SporDukkani.WebUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
