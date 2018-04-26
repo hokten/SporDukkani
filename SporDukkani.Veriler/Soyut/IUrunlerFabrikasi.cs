@@ -8,7 +8,7 @@ using SporDukkani.Veriler.Varliklar;
 
 namespace SporDukkani.Veriler.Soyut
 {
-    interface IUrunlerFabrikasi
+    public interface IUrunlerFabrikasi
     {
         IEnumerable<Urun> Urunler { get; }
     }

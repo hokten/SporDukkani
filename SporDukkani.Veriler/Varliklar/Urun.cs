@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SporDukkani.Veriler.Varliklar
 {
-    class Urun
+    public class Urun
     {
         public int UrunID { get; set; }
         public string Isim { get; set; }
