@@ -6,6 +6,7 @@ using Ninject;
 using Moq;
 using SporDukkani.Veriler.Soyut;
 using SporDukkani.Veriler.Varliklar;
+using SporDukkani.Veriler.Somut;
 
 namespace SporDukkani.WebUI.Altyapi
 {
@@ -27,13 +28,7 @@ namespace SporDukkani.WebUI.Altyapi
         }
         private void AddBindings()
         {
-            Mock<IUrunlerFabrikasi> sabit_veri = new Mock<IUrunlerFabrikasi>();
-            sabit_veri.Setup(m => m.Urunler).Returns(new List<Urun> {
-                new Urun { Isim="Futbol Topu", Fiyat=25m},
-                new Urun { Isim="Sörf Tahtası", Fiyat=15m},
-                new Urun { Isim="Koşu Ayakkabısı", Fiyat=34m}
-                });
-            kernel.Bind<IUrunlerFabrikasi>().ToConstant(sabit_veri.Object);
+            kernel.Bind<IUrunlerFabrikasi>().To<EFUrunFabrikasi>();
         }
     }
 }
