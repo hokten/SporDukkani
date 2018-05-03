@@ -20,7 +20,7 @@ namespace SporDukkani.WebUI.Controllers
         }
 
         // GET: Urun
-        public ActionResult Listele(int sayfa=1)
+        public ViewResult Listele(int sayfa=1)
         {
             return View(fabrika.Urunler
                 .OrderBy(m => m.UrunID)
