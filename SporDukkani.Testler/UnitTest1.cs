@@ -6,6 +6,10 @@ using Moq;
 using SporDukkani.Veriler.Varliklar;
 using SporDukkani.Veriler.Soyut;
 using SporDukkani.WebUI.Controllers;
+using SporDukkani.WebUI.Models;
+using SporDukkani.WebUI.HTMLHelpers;
+using System.Web.Mvc;
+
 
 namespace SporDukkani.Testler
 {
@@ -34,6 +38,22 @@ namespace SporDukkani.Testler
             Assert.AreEqual(urunDizisi[0].Isim, "Urun4");
             Assert.AreEqual(urunDizisi[1].Isim, "Urun5");
 
+        }
+        [TestMethod]
+        public void Sayfalama_Numaralari_Uretilmesi_Testi()
+        {
+            HtmlHelper yardimcim = null;
+            SayfalamaSinifi sayfa = new SayfalamaSinifi
+            {
+                BulunulanSayfa = 2,
+                ToplamKayitSayisi = 28,
+                SayfaBasinaDusenKayitSayisi = 10
+            };
+            Func<int, string> sayfaAdresiTemsilci = i => "Page" + i;
+            MvcHtmlString sonuc = yardimcim.SayfaBaglantilari(sayfa, sayfaAdresiTemsilci);
+            Assert.AreEqual(@"<a class=""btn btn-default"" href=""Page1"">1</a>" +
+                @"<a class=""btn btn-default btn-primary selected"" href=""Page2"">2</a>" +
+                @"<a class=""btn btn-default"" href=""Page3"">3</a>", sonuc.ToString());
         }
     }
 }
